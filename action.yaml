@@ -1,0 +1,19 @@
+name: "Smokey Testy"
+description: "Simple smoke test action"
+author: "beto0607"
+branding:
+  icon: circle
+  color: red
+
+inputs:
+  urls:
+    description: "Comma-separated list of URLs to test"
+    required: true
+  status-code:
+    description: "Excepted status code. Accepted values: \"3XX\", \"4XX\", \"3XX-5XX\" (range)"
+    required: false
+    default: "2XX"
+
+runs:
+  using: node16
+  main: dist/index.js
